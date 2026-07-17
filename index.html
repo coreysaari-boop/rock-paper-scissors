@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Page title in browser tab -->
+  <title>Rock-Paper-Scissors</title>
+  
+  <!-- External CSS stylesheet -->
+  <link rel="stylesheet" href="rock-paper-scissors.css">
+</head>
+
+<body>
+  
+  <!-- Main game container (centered with CSS flexbox) -->
+  <div id="game">
+    
+	<!-- Game title with gradient text styling -->
+    <h1>Rock Paper Scissors</h1>
+	
+	<!-- Player choice buttons -->
+	<div id="choices">
+	  <!-- Each button stores its choice in a data attribute -->
+	  <button data-choice="rock">🪨 Rock</button>
+	  <button data-choice="paper">📄 Paper</button>
+	  <button data-choice="scissors">✂️ Scissors</button>
+	</div>
+	
+	<!-- Displays round result -->
+	<div id="result"></div>
+	
+	<!-- Player scoreboard -->
+	<div id="score">
+	  Player: <span id="player-score">0</span>
+	  Computer: <span id="computer-score">0</span>
+	</div>
+	
+	<div id="rounds-indicator"></div>
+	
+	<div id="progress-bars">
+	  <div class="progress-label">Player Progress</div>
+	  <div class="progress-container">
+	    <div id="player-progress" class="progress-fill"></div>
+		<div id="player-milestone" class="progress-milestone"></div>
+	  </div>
+	  
+	  <div class="progress-label">Computer Progress</div>
+	  <div class="progress-container">
+	    <div id="computer-progress" class="progress-fill"></div>
+		<div id="computer-milestone" class="progress-milestone"></div>
+	  </div>
+	</div>
+		
+	<!-- Scrollable round history log -->
+	<div id="history"></div>
+	
+	<!-- Mode selection -->
+	<div id="modes">
+	  <button id="mode-bo5">Best of 5</button>
+	  <button id="mode-bo7">Best of 7</button>
+	</div>
+	
+	<!-- Reset button to clear scores and round history -->
+	<button id="reset">Reset Game</button>
+  
+  </div>
+  
+  <!-- Game Over Modal -->
+  <div id="game-over-modal" class="hidden">
+    <div class="modal-content">
+	  <h2 id="game-over-message"></h2>
+	  <button id="play-again">Play Again</button>
+	</div>
+  </div>
+
+  <!-- External JavaScript file containing game logic -->
+  <script src="rock-paper-scissors.js"></script>
+  
+</body>  
+</html>
